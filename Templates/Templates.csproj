@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Test1_1-2.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Words" Version="24.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="templates\" />
+    <Folder Include="results\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="results\ResultFolder">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\template1_1.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\template1_2.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="templates\TemplateFolder">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
