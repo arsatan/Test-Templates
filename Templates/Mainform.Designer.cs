@@ -41,9 +41,15 @@
             guestBirthDate = new DateTimePicker();
             guestFullName = new TextBox();
             button1_2 = new Button();
+            groupBox2 = new GroupBox();
+            button2_2 = new Button();
+            richTextBoxOutput = new RichTextBox();
+            button2_1 = new Button();
+            button2_3 = new Button();
             groupBox1_1.SuspendLayout();
             groupBox1_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)totalStaySum).BeginInit();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // button1_1
@@ -172,12 +178,65 @@
             button1_2.UseVisualStyleBackColor = true;
             button1_2.Click += button1_2_Click;
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(button2_3);
+            groupBox2.Controls.Add(button2_2);
+            groupBox2.Controls.Add(richTextBoxOutput);
+            groupBox2.Controls.Add(button2_1);
+            groupBox2.Location = new Point(12, 247);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(902, 544);
+            groupBox2.TabIndex = 3;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Задания 2";
+            // 
+            // button2_2
+            // 
+            button2_2.Location = new Point(6, 106);
+            button2_2.Name = "button2_2";
+            button2_2.Size = new Size(153, 46);
+            button2_2.TabIndex = 6;
+            button2_2.Text = "Задание 2.2";
+            button2_2.UseVisualStyleBackColor = true;
+            button2_2.Click += button2_2_Click;
+            // 
+            // richTextBoxOutput
+            // 
+            richTextBoxOutput.ForeColor = SystemColors.MenuHighlight;
+            richTextBoxOutput.Location = new Point(182, 38);
+            richTextBoxOutput.Name = "richTextBoxOutput";
+            richTextBoxOutput.Size = new Size(706, 490);
+            richTextBoxOutput.TabIndex = 5;
+            richTextBoxOutput.Text = "";
+            // 
+            // button2_1
+            // 
+            button2_1.Location = new Point(6, 54);
+            button2_1.Name = "button2_1";
+            button2_1.Size = new Size(153, 46);
+            button2_1.TabIndex = 4;
+            button2_1.Text = "Задание 2.1";
+            button2_1.UseVisualStyleBackColor = true;
+            button2_1.Click += button2_1_Click;
+            // 
+            // button2_3
+            // 
+            button2_3.Location = new Point(6, 158);
+            button2_3.Name = "button2_3";
+            button2_3.Size = new Size(153, 46);
+            button2_3.TabIndex = 7;
+            button2_3.Text = "Задание 2.3";
+            button2_3.UseVisualStyleBackColor = true;
+            button2_3.Click += button2_3_Click;
+            // 
             // Mainform
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightBlue;
-            ClientSize = new Size(926, 256);
+            ClientSize = new Size(926, 796);
+            Controls.Add(groupBox2);
             Controls.Add(groupBox1_2);
             Controls.Add(groupBox1_1);
             MaximizeBox = false;
@@ -190,6 +249,7 @@
             groupBox1_2.ResumeLayout(false);
             groupBox1_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)totalStaySum).EndInit();
+            groupBox2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -208,5 +268,10 @@
         private Label label2;
         private Label label1;
         private NumericUpDown totalStaySum;
+        private GroupBox groupBox2;
+        private Button button2_1;
+        private RichTextBox richTextBoxOutput;
+        private Button button2_2;
+        private Button button2_3;
     }
 }

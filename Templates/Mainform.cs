@@ -5,6 +5,7 @@ using System;
 using System.ComponentModel;
 using System.Globalization;
 using System.Net.Http.Headers;
+using Templates.Classes;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Templates
@@ -51,7 +52,48 @@ namespace Templates
 
         private void totalStaySum_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
+        }
+
+        private void button2_1_Click(object sender, EventArgs e)
+        {
+            richTextBoxOutput.Clear();
+            Task2_1 task2_1 = new Task2_1();
+            char[] symbols = task2_1.GetData(DateTime.Parse("21.05.2006 0:00:00"));
+            foreach (char symbol in symbols)
+            {
+                richTextBoxOutput.Text = richTextBoxOutput.Text + "[" + symbol + "]";
+            }
+        }
+
+        private void button2_2_Click(object sender, EventArgs e)
+        {
+            richTextBoxOutput.Clear();
+            Task2_2 task2_2 = new Task2_2();
+            richTextBoxOutput.Text = "с ИНН: ";
+            char[] symbols = task2_2.GetData("6022", "767579", true);
+            foreach (char symbol in symbols)
+            {
+                richTextBoxOutput.Text = richTextBoxOutput.Text + "[" + symbol + "]";
+            }
+            richTextBoxOutput.Text = richTextBoxOutput.Text + "\r\nБез ИНН: ";
+            symbols = task2_2.GetData("6022", "767579", false);
+            foreach (char symbol in symbols)
+            {
+                richTextBoxOutput.Text = richTextBoxOutput.Text + "[" + symbol + "]";
+            }
+        }
+
+        private void button2_3_Click(object sender, EventArgs e)
+        {
+            richTextBoxOutput.Clear();
+            Task2_3 task2_3 = new Task2_3();
+            richTextBoxOutput.Text = "для (14): ";
+            char[] symbols = task2_3.GetData("ВРУДОРФ", "Временное удостоверение РФ");
+            foreach (char symbol in symbols)
+            {
+                richTextBoxOutput.Text = richTextBoxOutput.Text + "[" + symbol + "]";
+            }
         }
     }
     internal static class PrintDoc
