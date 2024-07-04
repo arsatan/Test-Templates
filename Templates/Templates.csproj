@@ -20,6 +20,7 @@
     <Folder Include="Properties\DataSources\" />
     <Folder Include="templates\" />
     <Folder Include="results\" />
+    <Folder Include="Docs\" />
   </ItemGroup>
 
   <ItemGroup>
